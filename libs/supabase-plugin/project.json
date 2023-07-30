@@ -1,35 +1,37 @@
 {
-  "name": "supabase",
+  "name": "supabase-plugin",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/supabase/src",
+  "sourceRoot": "libs/supabase-plugin/src",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/libs/supabase",
-        "main": "libs/supabase/src/index.ts",
-        "tsConfig": "libs/supabase/tsconfig.lib.json",
+        "outputPath": "dist/libs/supabase-plugin",
+        "main": "libs/supabase-plugin/src/index.ts",
+        "tsConfig": "libs/supabase-plugin/tsconfig.lib.json",
         "assets": [
-          "libs/supabase/*.md",
+          "libs/supabase-plugin/*.md",
           {
-            "input": "./libs/supabase/src",
+            "input": "./libs/supabase-plugin/src",
             "glob": "**/!(*.ts)",
             "output": "./src"
           },
           {
-            "input": "./libs/supabase/src",
+            "input": "./libs/supabase-plugin/src",
             "glob": "**/*.d.ts",
             "output": "./src"
           },
           {
-            "input": "./libs/supabase",
+            "input": "./libs/supabase-plugin",
             "glob": "generators.json",
             "output": "."
           },
           {
-            "input": "./libs/supabase",
+            "input": "./libs/supabase-plugin",
             "glob": "executors.json",
             "output": "."
           }
@@ -38,20 +40,24 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
         "lintFilePatterns": [
-          "libs/supabase/**/*.ts",
-          "libs/supabase/package.json",
-          "libs/supabase/generators.json"
+          "libs/supabase-plugin/**/*.ts",
+          "libs/supabase-plugin/package.json",
+          "libs/supabase-plugin/generators.json"
         ]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
-        "jestConfig": "libs/supabase/jest.config.ts",
+        "jestConfig": "libs/supabase-plugin/jest.config.ts",
         "passWithNoTests": true
       },
       "configurations": {

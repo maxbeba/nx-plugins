@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-plugins/supabase": ["libs/supabase/src/index.ts"]
+      "@nx-plugins/supabase-plugin": ["libs/supabase-plugin/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

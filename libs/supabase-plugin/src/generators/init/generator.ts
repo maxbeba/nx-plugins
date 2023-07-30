@@ -1,5 +1,5 @@
-import { logger, Tree, updateJson } from '@nx/devkit';
-import { InitGeneratorSchema } from './schema';
+import {logger, Tree, updateJson} from '@nx/devkit';
+import {InitGeneratorSchema} from './schema';
 
 export async function initGenerator(tree: Tree, options: InitGeneratorSchema) {
   if (!options.skipPackageJson) {
