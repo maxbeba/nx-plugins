@@ -36,12 +36,6 @@ function generateProjectConfiguration(
       start: {
         executor: '@nx-plugins/supabase-plugin:start',
       },
-      'start-silent': {
-        executor: '@nx-plugins/supabase-plugin:start',
-        options: {
-          printStatus: false,
-        },
-      },
       stop: {
         executor: '@nx-plugins/supabase-plugin:stop',
       },

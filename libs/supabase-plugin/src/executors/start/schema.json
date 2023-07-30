@@ -7,7 +7,7 @@
   "properties": {
     "printStatus": {
       "type": "boolean",
-      "default": true,
+      "default": false,
       "description": "Prints the urls of docker images when finished."
     }
   },
