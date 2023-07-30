@@ -47,7 +47,8 @@
         "lintFilePatterns": [
           "libs/supabase-plugin/**/*.ts",
           "libs/supabase-plugin/package.json",
-          "libs/supabase-plugin/generators.json"
+          "libs/supabase-plugin/generators.json",
+          "libs/supabase-plugin/executors.json"
         ]
       }
     },

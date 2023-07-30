@@ -1,0 +1,19 @@
+{
+  "executors": {
+    "start": {
+      "implementation": "./src/executors/start/executor",
+      "schema": "./src/executors/start/schema.json",
+      "description": "Starts the supabase local environment"
+    },
+    "stop": {
+      "implementation": "./src/executors/stop/executor",
+      "schema": "./src/executors/stop/schema.json",
+      "description": "Stops the supabase docker images"
+    },
+    "status": {
+      "implementation": "./src/executors/status/executor",
+      "schema": "./src/executors/status/schema.json",
+      "description": "Returns the status and urls for the supabase docker images"
+    }
+  }
+}

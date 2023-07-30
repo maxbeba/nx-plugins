@@ -5,8 +5,8 @@ import {
   Tree,
   workspaceRoot,
 } from '@nx/devkit';
-import {AppGeneratorSchema} from './schema';
-import {execSync} from 'child_process';
+import { AppGeneratorSchema } from './schema';
+import { execSync } from 'child_process';
 
 export async function appGenerator(tree: Tree, options: AppGeneratorSchema) {
   const projectRoot = `apps/supabase`;
@@ -26,7 +26,7 @@ export async function appGenerator(tree: Tree, options: AppGeneratorSchema) {
 function generateProjectConfiguration(
   tree: Tree,
   name: string,
-  projectRoot: string,
+  projectRoot: string
 ) {
   addProjectConfiguration(tree, name, {
     root: projectRoot,
@@ -34,12 +34,19 @@ function generateProjectConfiguration(
     sourceRoot: `${projectRoot}`,
     targets: {
       start: {
-        executor: 'nx:run-commands',
+        executor: '@nx-plugins/supabase-plugin:start',
+      },
+      'start-silent': {
+        executor: '@nx-plugins/supabase-plugin:start',
         options: {
-          cwd: projectRoot,
-          command: 'npx supabase start',
-          readyWhen: 'local', // This word is printed in all cases, success and failure
+          printStatus: false,
         },
+      },
+      stop: {
+        executor: '@nx-plugins/supabase-plugin:stop',
+      },
+      status: {
+        executor: '@nx-plugins/supabase-plugin:status',
       },
     },
   });

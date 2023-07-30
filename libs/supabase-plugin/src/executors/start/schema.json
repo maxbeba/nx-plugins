@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "title": "Start executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "printStatus": {
+      "type": "boolean",
+      "default": true,
+      "description": "Prints the urls of docker images when finished."
+    }
+  },
+  "required": []
+}
