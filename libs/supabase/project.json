@@ -42,7 +42,8 @@
       "options": {
         "lintFilePatterns": [
           "libs/supabase/**/*.ts",
-          "libs/supabase/package.json"
+          "libs/supabase/package.json",
+          "libs/supabase/generators.json"
         ]
       }
     },
